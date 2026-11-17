@@ -1,0 +1,37 @@
+{
+  "schema_version": "TD07-WRITING-1.0",
+  "origin": "TD07",
+  "topic": "LLM pour assister le screening d'une revue systématique",
+  "required_rqs": ["RQ1", "RQ2", "RQ3"],
+  "draft_report": {
+    "title": "LLM et screening des revues systématiques",
+    "sections": [
+      {"rq_id": "RQ1", "title": "Sensibilité", "claim_ids": ["A1", "A2"]},
+      {"rq_id": "RQ2", "title": "Compromis opérationnel", "claim_ids": ["A3", "A4"]},
+      {"rq_id": "RQ3", "title": "Contrôle avant déploiement", "claim_ids": ["A5"]}
+    ],
+    "claims": [
+      {"id": "A1", "rq_id": "RQ1", "text": "Après calibration, la sensibilité atteint 100 % pour les études finalement incluses.", "evidence_ids": ["E1"]},
+      {"id": "A2", "rq_id": "RQ1", "text": "La sensibilité varie entre 58 % et 100 % au stade titre-résumé.", "evidence_ids": ["E1"]},
+      {"id": "A3", "rq_id": "RQ2", "text": "La règle orientée rappel augmente la sensibilité mais diminue la spécificité.", "evidence_ids": ["E7"]},
+      {"id": "A4", "rq_id": "RQ2", "text": "La réduction simulée de charge varie entre 65 % et 85 %.", "evidence_ids": ["E3"]},
+      {"id": "A5", "rq_id": "RQ3", "text": "La précision dépasse celle des experts.", "evidence_ids": ["E8"]}
+    ]
+  },
+  "repaired_report": {
+    "title": "LLM et screening des revues systématiques",
+    "sections": [
+      {"rq_id": "RQ1", "title": "Sensibilité", "claim_ids": ["A1", "A2"]},
+      {"rq_id": "RQ2", "title": "Compromis opérationnel", "claim_ids": ["A3", "A4"]},
+      {"rq_id": "RQ3", "title": "Contrôle avant déploiement", "claim_ids": ["A5R"]}
+    ],
+    "claims": [
+      {"id": "A1", "rq_id": "RQ1", "text": "Après calibration, la sensibilité atteint 100 % pour les études finalement incluses.", "evidence_ids": ["E1"]},
+      {"id": "A2", "rq_id": "RQ1", "text": "La sensibilité varie entre 58 % et 100 % au stade titre-résumé.", "evidence_ids": ["E1"]},
+      {"id": "A3", "rq_id": "RQ2", "text": "La règle orientée rappel augmente la sensibilité mais diminue la spécificité.", "evidence_ids": ["E7"]},
+      {"id": "A4", "rq_id": "RQ2", "text": "La réduction simulée de charge varie entre 65 % et 85 %.", "evidence_ids": ["E3"]},
+      {"id": "A5R", "rq_id": "RQ3", "text": "Le prompt doit être calibré et contrôlé dans le domaine avant déploiement.", "evidence_ids": ["E8"]}
+    ]
+  }
+}
+
